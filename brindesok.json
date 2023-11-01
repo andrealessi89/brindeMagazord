@@ -1,0 +1,34 @@
+var brindesArray = {
+    "Etapa1": [{
+        "configuracao": {
+            "valor_alvo": 200.00,
+            "qt_brinde_permitido": 1
+        },
+        "grupo_1": [{
+            "nome": "Camisa Masculina",
+            "tipo_variacao": "cor",
+            "variacao": [{
+                "descricao": "Preta",
+                "codigo": "CMP",
+                "tamanhos": ["P", "M", "G", "GG"]
+            }, {
+                "descricao": "Branca",
+                "codigo": "CMB",
+                "tamanhos": ["P", "M", "G", "GG"]
+            }]
+        }],
+        "grupo_2": [{
+            "nome": "Camisa Feminina",
+            "tipo_variacao": "cor",
+            "variacao": [{
+                "descricao": "Preta",
+                "codigo": "CFP",
+                "tamanhos": ["P", "M", "G", "GG"]
+            }, {
+                "descricao": "Branca",
+                "codigo": "CFB",
+                "tamanhos": ["P", "M", "G", "GG"]
+            }]
+        }]
+    }]
+};

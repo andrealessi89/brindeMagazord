@@ -1,117 +1,37 @@
 var brindesArray = {
-    "Etapa1": [{
-        "configuracao": {
-            "valor_alvo": 400.00,
-            "qt_brinde_permitido": 2,
-            "grupos_total": 2
-        },
-
-        "grupo_1": [{
-                "nome": "Camisa Misteriosa",
-                "codigo": "CBP01",
-                "img": "https://magazord-public.s3.sa-east-1.amazonaws.com/blacktarg/img/2023/10/produto/4512/medium/camiseta-misteriosa-preta.png",
-                "tipo_variacao": "tamanho",
-                "variacao": [{
-                        "descricao": "P",
-                        "codigo": "CBP01P"
-                    },
-                    {
-                        "descricao": "M",
-                        "codigo": "CBP01M"
-                    },
-                    {
-                        "descricao": "G",
-                        "codigo": "CBP01G"
-                    },
-                    
-                    {
-                        "descricao": "GG",
-                        "codigo": "CBP01GG"
-                    }
-                    
-                ]
-            },
-        ],
-        "grupo_2": [
-            {
-                "nome": "Boné Aba Curva White Circle Black - BRINDE",
-                "codigo": "BACRDBRINDE1",
-                "img": "https://global.cdn.magazord.com.br/blacktarg/img/2023/08/produto/4030/bone-branco-2-frente.png?ims=fit-in/96x96/filters:fill(white)"
-            },
-            {
-                "nome": "Boné Aba Curva Light Blue - Brinde",
-                "codigo": "BACRLBRINDE1",
-                "img": "https://global.cdn.magazord.com.br/blacktarg/img/2023/08/produto/3990/bone-azul-e-branco-frente.png?ims=fit-in/96x96/filters:fill(white)"
-            },
-            {
-                "nome": "Boné Aba Curva Desert Ball - BRINDE",
-                "codigo": "BACYJBRINDE1",
-                "img": "https://global.cdn.magazord.com.br/blacktarg/img/2023/05/produto/3549/bone-aba-curva-desert-ball-2.png?ims=fit-in/96x96/filters:fill(white)"
-            }, 
-            {
-                "nome": "Boné Aba Curva Beige Horse - Brinde",
-                "codigo": "BACBRINDE1",
-                "img": "https://global.cdn.magazord.com.br/blacktarg/img/2023/05/produto/3571/bone-aba-curva-beige-horse-2.png?ims=fit-in/96x96/filters:fill(white)"
-            },
-
-        ]
-    }],
-    "Etapa2": [{
-        "configuracao": {
-            "valor_alvo": 600.00,
-            "qt_brinde_permitido": 2,
-            "grupos_total": 2
-        },
-        "grupo_1": [{
-                "nome": "Camisa Misteriosa",
-                "codigo": "CBP01",
-                "img": "https://magazord-public.s3.sa-east-1.amazonaws.com/blacktarg/img/2023/10/produto/4512/medium/camiseta-misteriosa-preta.png",
-                "tipo_variacao": "tamanho",
-                "variacao": [{
-                        "descricao": "P",
-                        "codigo": "CBP01P"
-                    },
-                    {
-                        "descricao": "M",
-                        "codigo": "CBP01M"
-                    },
-                    {
-                        "descricao": "G",
-                        "codigo": "CBP01G"
-                    },
-                    
-                    {
-                        "descricao": "GG",
-                        "codigo": "CBP01GG"
-                    }
-                    
-                ]
-            },
-        ],
-        "grupo_2": [
-            {
-                "nome": "Boné Aba Curva White Circle Black - BRINDE",
-                "codigo": "BACRDBRINDE1",
-                "img": "https://global.cdn.magazord.com.br/blacktarg/img/2023/08/produto/4030/bone-branco-2-frente.png?ims=fit-in/96x96/filters:fill(white)"
-            },
-            {
-                "nome": "Boné Aba Curva Light Blue - Brinde",
-                "codigo": "BACRLBRINDE1",
-                "img": "https://global.cdn.magazord.com.br/blacktarg/img/2023/08/produto/3990/bone-azul-e-branco-frente.png?ims=fit-in/96x96/filters:fill(white)"
-            },
-            {
-                "nome": "Boné Aba Curva Desert Ball - BRINDE",
-                "codigo": "BACYJBRINDE1",
-                "img": "https://global.cdn.magazord.com.br/blacktarg/img/2023/05/produto/3549/bone-aba-curva-desert-ball-2.png?ims=fit-in/96x96/filters:fill(white)"
-            }, 
-            {
-                "nome": "Boné Aba Curva Beige Horse - Brinde",
-                "codigo": "BACBRINDE1",
-                "img": "https://global.cdn.magazord.com.br/blacktarg/img/2023/05/produto/3571/bone-aba-curva-beige-horse-2.png?ims=fit-in/96x96/filters:fill(white)"
-            }, 
-        ]
-    }],
-}
+  "Etapa1": [{
+      "configuracao": {
+          "valor_alvo": 200.00,
+          "qt_brinde_permitido": 1
+      },
+      "grupo_1": [{
+          "nome": "Camisa Masculina",
+          "tipo_variacao": "cor",
+          "variacao": [{
+              "descricao": "Preta",
+              "codigo": "CMP",
+              "tamanhos": ["P", "M", "G", "GG"]
+          }, {
+              "descricao": "Branca",
+              "codigo": "CMB",
+              "tamanhos": ["P", "M", "G", "GG"]
+          }]
+      }],
+      "grupo_2": [{
+          "nome": "Camisa Feminina",
+          "tipo_variacao": "cor",
+          "variacao": [{
+              "descricao": "Preta",
+              "codigo": "CFP",
+              "tamanhos": ["P", "M", "G", "GG"]
+          }, {
+              "descricao": "Branca",
+              "codigo": "CFB",
+              "tamanhos": ["P", "M", "G", "GG"]
+          }]
+      }]
+  }]
+};
 
 $(document).ajaxComplete(function(event, xhr, settings) {
     if (settings.url ==  "/checkout/cart?operation=atualizaValoresCarrinho" || settings.url == "/checkout/cart?operation=deleteItem" || settings.url == "/checkout/cart?operation=adicionaItem" || settings.url == "/checkout/cart?operation=removeItem") {
